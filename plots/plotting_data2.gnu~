@@ -1,0 +1,26 @@
+#!/usr/bin/gnuplot
+#
+reset
+
+set terminal latex 
+
+unset key
+
+set ytics 100
+set tics scale 0.75
+
+set xrange [1:31]
+#set yrange [0:800]
+set autoscale y
+
+set output 'recursively_divergent_atomic.tex'
+plot 'recursively_divergent_clockdiff_atomic.dat' with linespoints pt 5
+
+set output 'recursively_divergent_parallel.tex'
+plot 'recursively_divergent_clockdiff_atomic.dat' with linespoints pt 5
+
+set output 'iteratively_divergent_atomic.tex'
+plot 'recursively_divergent_clockdiff_atomic.dat' with linespoints pt 5
+
+set output 'iteratively_divergent_parallel.tex'
+plot 'recursively_divergent_clockdiff_atomic.dat' with linespoints pt 5
